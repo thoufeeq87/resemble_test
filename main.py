@@ -7,10 +7,10 @@ Resemble.api_key('iVzdZcQ5HrRRjMIpc3bMIwtt')
 
 # Get your default Resemble project.
 project_uuid = Resemble.v2.projects.all(1, 10)['items'][0]['uuid']
-st.text_input("All Details",value = Resemble.v2.projects.all(1, 10), wcwidth= 100 )
+st.text_input("All Details",value = Resemble.v2.projects.all(1, 10) )
 # Get your Voice uuid. In this example, we'll obtain the first.
 voice_uuid = Resemble.v2.voices.all(1, 10)['items'][0]['uuid']
-st.text_area("All Details of voice" ,Value = Resemble.v2.voices.all(1, 10),wcwidth=100)
+st.text_area("All Details of voice",value = Resemble.v2.voices.all(1, 10))
 # Let's create a clip!
 body = 'This is a test'
 response = Resemble.v2.clips.create_sync(project_uuid,
