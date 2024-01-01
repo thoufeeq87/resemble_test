@@ -7,7 +7,7 @@ Resemble.api_key('iVzdZcQ5HrRRjMIpc3bMIwtt')
 
 # Get your default Resemble project.
 project_uuid = Resemble.v2.projects.all(1, 10)['items'][0]['uuid']
-st.text_area(Resemble.v2.projects.all(1, 10)['items'][0]['uuid'])
+st.write(Resemble.v2.projects.all(1, 10)['items'][0]['uuid'])
 # Get your Voice uuid. In this example, we'll obtain the first.
 voice_uuid = Resemble.v2.voices.all(1, 10)['items'][0]['uuid']
 print(Resemble.v2.voices.all(1, 10))
